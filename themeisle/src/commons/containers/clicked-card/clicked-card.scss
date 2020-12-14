@@ -1,0 +1,137 @@
+.modal {
+  position: absolute;
+  width: 50vw;
+  height: auto;
+  border-radius: 5px;
+  z-index: 1000;
+  background-color: #ffffff;
+
+  .top {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+
+    .close-modal {
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: var(--grayish-blue);
+    }
+  }
+
+  .img {
+    width: inherit;
+    height: 55%;
+    overflow: hidden;
+  }
+
+  .modal-title {
+    margin-top: 20px;
+  }
+
+  .footer {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+
+    img[alt="avatar"] {
+      width: 45px;
+      height: 45px;
+    }
+
+    .author {
+      margin: 0 15px;
+    }
+  }
+}
+
+.entrance {
+  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22)
+    both;
+  animation: scale-in-center 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22) both;
+}
+
+.exit {
+  -webkit-animation: scale-out-center 0.5s
+    cubic-bezier(0.755, 0.05, 0.855, 0.06) both;
+  animation: scale-out-center 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06) both;
+}
+@-webkit-keyframes scale-out-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+@keyframes scale-out-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .modal {
+    width: 80vw;
+
+    .modal-title {
+      font-size: 1.2em;
+    }
+
+    .card-content {
+      font-size: 1em;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .modal {
+    width: 80vw;
+    height: auto;
+
+    .footer {
+      align-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+  }
+}
